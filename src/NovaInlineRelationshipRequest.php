@@ -1,6 +1,6 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship;
+namespace Keko94\NovaInlineRelationship;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;

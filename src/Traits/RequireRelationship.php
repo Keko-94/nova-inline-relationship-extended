@@ -1,6 +1,6 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Traits;
+namespace Keko94\NovaInlineRelationship\Traits;
 
 trait RequireRelationship
 {

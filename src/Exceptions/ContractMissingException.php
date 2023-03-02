@@ -1,6 +1,6 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Exceptions;
+namespace Keko94\NovaInlineRelationship\Exceptions;
 
 use Exception;
 

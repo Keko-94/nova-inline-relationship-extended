@@ -4,7 +4,7 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
-use KirschbaumDevelopment\NovaInlineRelationship\NovaInlineRelationship;
+use Keko94\NovaInlineRelationship\NovaInlineRelationship;
 
 class RequireChildTest extends TestCase
 {

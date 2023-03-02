@@ -1,6 +1,6 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Observers;
+namespace Keko94\NovaInlineRelationship\Observers;
 
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model;

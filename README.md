@@ -103,7 +103,7 @@ This will publish a config file as `config/nova-inline-relationships.php`. Add y
 ```php
 'third-party' => [
     'App\Nova\ThirdPartyIntegrations',
-    'KirschbaumDevelopment\NovaInlineRelationship\Integrations',
+    'Keko94\NovaInlineRelationship\Integrations',
 ]
 ``` 
 
@@ -114,8 +114,8 @@ Create a new class inside that namespace that looks like the following:
 
 namespace App\Nova\ThirdPartyIntegrations;
 
-use KirschbaumDevelopment\NovaInlineRelationship\Integrations\ThirdParty;
-use KirschbaumDevelopment\NovaInlineRelationship\Integrations\Contracts\ThirdPartyContract;
+use Keko94\NovaInlineRelationship\Integrations\ThirdParty;
+use Keko94\NovaInlineRelationship\Integrations\Contracts\ThirdPartyContract;
 
 class SomeThirdPartyField extends ThirdParty implements ThirdPartyContract
 {

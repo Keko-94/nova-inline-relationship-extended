@@ -1,8 +1,8 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Integrations;
+namespace Keko94\NovaInlineRelationship\Integrations;
 
-use KirschbaumDevelopment\NovaInlineRelationship\Integrations\Contracts\ThirdPartyContract;
+use Keko94\NovaInlineRelationship\Integrations\Contracts\ThirdPartyContract;
 
 class NovaDependencyContainer extends ThirdParty implements ThirdPartyContract
 {

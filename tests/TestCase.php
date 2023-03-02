@@ -11,8 +11,8 @@ use Illuminate\Database\Schema\Blueprint;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Tests\Resource\Employee as EmployeeResource;
-use KirschbaumDevelopment\NovaInlineRelationship\NovaInlineRelationship;
-use KirschbaumDevelopment\NovaInlineRelationship\NovaInlineRelationshipServiceProvider;
+use Keko94\NovaInlineRelationship\NovaInlineRelationship;
+use Keko94\NovaInlineRelationship\NovaInlineRelationshipServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

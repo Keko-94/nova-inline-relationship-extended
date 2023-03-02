@@ -1,14 +1,14 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship;
+namespace Keko94\NovaInlineRelationship;
 
 use Illuminate\Support\Facades\File;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Fields\Field;
 use Illuminate\Support\ServiceProvider;
-use KirschbaumDevelopment\NovaInlineRelationship\Helpers\NovaInlineRelationshipHelper;
-use KirschbaumDevelopment\NovaInlineRelationship\Exceptions\UnsupportedRelationshipType;
+use Keko94\NovaInlineRelationship\Helpers\NovaInlineRelationshipHelper;
+use Keko94\NovaInlineRelationship\Exceptions\UnsupportedRelationshipType;
 
 class NovaInlineRelationshipServiceProvider extends ServiceProvider
 {

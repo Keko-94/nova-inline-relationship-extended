@@ -1,6 +1,6 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Observers;
+namespace Keko94\NovaInlineRelationship\Observers;
 
 class MorphOneObserver extends HasOneObserver
 {

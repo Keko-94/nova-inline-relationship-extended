@@ -8,8 +8,8 @@ use Tests\Resource\EmployeeTeams;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use KirschbaumDevelopment\NovaInlineRelationship\NovaInlineRelationship;
-use KirschbaumDevelopment\NovaInlineRelationship\Exceptions\UnsupportedRelationshipType;
+use Keko94\NovaInlineRelationship\NovaInlineRelationship;
+use Keko94\NovaInlineRelationship\Exceptions\UnsupportedRelationshipType;
 
 class NovaInlineRelationshipServiceProviderTest extends TestCase
 {

@@ -2,6 +2,6 @@
 
 return [
     'third-party' => [
-        'KirschbaumDevelopment\NovaInlineRelationship\Integrations',
+        'Keko94\NovaInlineRelationship\Integrations',
     ],
 ];

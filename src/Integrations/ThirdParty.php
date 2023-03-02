@@ -1,6 +1,6 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Integrations;
+namespace Keko94\NovaInlineRelationship\Integrations;
 
 abstract class ThirdParty
 {

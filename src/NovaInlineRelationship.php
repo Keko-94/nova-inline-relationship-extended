@@ -1,6 +1,6 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship;
+namespace Keko94\NovaInlineRelationship;
 
 use stdClass;
 use Carbon\Carbon;
@@ -19,10 +19,10 @@ use Laravel\Nova\Contracts\ListableField;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\ResolvesReverseRelation;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use KirschbaumDevelopment\NovaInlineRelationship\Rules\RelationshipRule;
+use Keko94\NovaInlineRelationship\Rules\RelationshipRule;
 use Illuminate\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
-use KirschbaumDevelopment\NovaInlineRelationship\Traits\RequireRelationship;
-use KirschbaumDevelopment\NovaInlineRelationship\Observers\NovaInlineRelationshipObserver;
+use Keko94\NovaInlineRelationship\Traits\RequireRelationship;
+use Keko94\NovaInlineRelationship\Observers\NovaInlineRelationshipObserver;
 
 class NovaInlineRelationship extends Field
 {

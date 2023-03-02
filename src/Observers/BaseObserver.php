@@ -1,9 +1,9 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Observers;
+namespace Keko94\NovaInlineRelationship\Observers;
 
 use Illuminate\Database\Eloquent\Model;
-use KirschbaumDevelopment\NovaInlineRelationship\Contracts\RelationshipObservable;
+use Keko94\NovaInlineRelationship\Contracts\RelationshipObservable;
 
 abstract class BaseObserver implements RelationshipObservable
 {

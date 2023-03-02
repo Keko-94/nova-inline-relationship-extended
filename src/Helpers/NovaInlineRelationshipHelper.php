@@ -1,6 +1,6 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Helpers;
+namespace Keko94\NovaInlineRelationship\Helpers;
 
 class NovaInlineRelationshipHelper
 {
@@ -13,6 +13,6 @@ class NovaInlineRelationshipHelper
      */
     public static function getObserver($relationship)
     {
-        return '\\KirschbaumDevelopment\\NovaInlineRelationship\\Observers\\' . class_basename($relationship) . 'Observer';
+        return '\\Keko94\\NovaInlineRelationship\\Observers\\' . class_basename($relationship) . 'Observer';
     }
 }

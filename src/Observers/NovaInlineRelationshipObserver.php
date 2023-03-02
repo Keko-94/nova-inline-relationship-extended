@@ -1,14 +1,14 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Observers;
+namespace Keko94\NovaInlineRelationship\Observers;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Nova;
 use Illuminate\Database\Eloquent\Model;
-use KirschbaumDevelopment\NovaInlineRelationship\Integrations\Integrate;
-use KirschbaumDevelopment\NovaInlineRelationship\NovaInlineRelationship;
-use KirschbaumDevelopment\NovaInlineRelationship\Contracts\RelationshipObservable;
-use KirschbaumDevelopment\NovaInlineRelationship\Helpers\NovaInlineRelationshipHelper;
+use Keko94\NovaInlineRelationship\Integrations\Integrate;
+use Keko94\NovaInlineRelationship\NovaInlineRelationship;
+use Keko94\NovaInlineRelationship\Contracts\RelationshipObservable;
+use Keko94\NovaInlineRelationship\Helpers\NovaInlineRelationshipHelper;
 
 class NovaInlineRelationshipObserver
 {

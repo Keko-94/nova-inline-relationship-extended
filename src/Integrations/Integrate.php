@@ -1,11 +1,11 @@
 <?php
 
-namespace KirschbaumDevelopment\NovaInlineRelationship\Integrations;
+namespace Keko94\NovaInlineRelationship\Integrations;
 
 use ReflectionClass;
-use KirschbaumDevelopment\NovaInlineRelationship\Exceptions\ContractMissingException;
-use KirschbaumDevelopment\NovaInlineRelationship\Integrations\Field as FieldInterface;
-use KirschbaumDevelopment\NovaInlineRelationship\Integrations\Contracts\ThirdPartyContract;
+use Keko94\NovaInlineRelationship\Exceptions\ContractMissingException;
+use Keko94\NovaInlineRelationship\Integrations\Field as FieldInterface;
+use Keko94\NovaInlineRelationship\Integrations\Contracts\ThirdPartyContract;
 
 class Integrate
 {

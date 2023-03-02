@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Exceptions;
+namespace Keko94\NovaInlineRelationshipExtended\Exceptions;
 
 use InvalidArgumentException;
 

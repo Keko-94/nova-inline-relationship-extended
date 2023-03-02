@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship;
+namespace Keko94\NovaInlineRelationshipExtended;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
@@ -8,7 +8,7 @@ use Illuminate\Support\Collection;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Symfony\Component\HttpFoundation\Exception\SessionNotFoundException;
 
-class NovaInlineRelationshipRequest extends NovaRequest
+class NovaInlineRelationshipExtendedRequest extends NovaRequest
 {
     /**
      * Update list of converted files

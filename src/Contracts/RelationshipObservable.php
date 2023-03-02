@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Contracts;
+namespace Keko94\NovaInlineRelationshipExtended\Contracts;
 
 use Illuminate\Database\Eloquent\Model;
 

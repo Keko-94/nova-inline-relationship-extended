@@ -1,16 +1,16 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Observers;
+namespace Keko94\NovaInlineRelationshipExtended\Observers;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Nova;
 use Illuminate\Database\Eloquent\Model;
-use Keko94\NovaInlineRelationship\Integrations\Integrate;
-use Keko94\NovaInlineRelationship\NovaInlineRelationship;
-use Keko94\NovaInlineRelationship\Contracts\RelationshipObservable;
-use Keko94\NovaInlineRelationship\Helpers\NovaInlineRelationshipHelper;
+use Keko94\NovaInlineRelationshipExtended\Integrations\Integrate;
+use Keko94\NovaInlineRelationshipExtended\NovaInlineRelationshipExtended;
+use Keko94\NovaInlineRelationshipExtended\Contracts\RelationshipObservable;
+use Keko94\NovaInlineRelationshipExtended\Helpers\NovaInlineRelationshipExtendedHelper;
 
-class NovaInlineRelationshipObserver
+class NovaInlineRelationshipExtendedObserver
 {
     /**
      * Handle updating event for the model
@@ -62,7 +62,7 @@ class NovaInlineRelationshipObserver
 
         $relationships = $this->getModelRelationships($model);
 
-        $relatedModelAttribs = NovaInlineRelationship::$observedModels[$modelClass];
+        $relatedModelAttribs = NovaInlineRelationshipExtended::$observedModels[$modelClass];
 
         foreach ($relationships as $relationship) {
             $observer = $this->getRelationshipObserver($model, $relationship);
@@ -83,7 +83,7 @@ class NovaInlineRelationshipObserver
      */
     public function getRelationshipObserver(Model $model, $relationship): RelationshipObservable|null
     {
-        $className = NovaInlineRelationshipHelper::getObserver($model->{$relationship}());
+        $className = NovaInlineRelationshipExtendedHelper::getObserver($model->{$relationship}());
 
         return class_exists($className) ? resolve($className) : null;
     }

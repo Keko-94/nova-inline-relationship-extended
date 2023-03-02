@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship;
+namespace Keko94\NovaInlineRelationshipExtended;
 
 use stdClass;
 use Carbon\Carbon;
@@ -19,12 +19,12 @@ use Laravel\Nova\Contracts\ListableField;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\ResolvesReverseRelation;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Keko94\NovaInlineRelationship\Rules\RelationshipRule;
+use Keko94\NovaInlineRelationshipExtended\Rules\RelationshipRule;
 use Illuminate\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
-use Keko94\NovaInlineRelationship\Traits\RequireRelationship;
-use Keko94\NovaInlineRelationship\Observers\NovaInlineRelationshipObserver;
+use Keko94\NovaInlineRelationshipExtended\Traits\RequireRelationship;
+use Keko94\NovaInlineRelationshipExtended\Observers\NovaInlineRelationshipExtendedObserver;
 
-class NovaInlineRelationship extends Field
+class NovaInlineRelationshipExtended extends Field
 {
     use RequireRelationship;
 
@@ -57,11 +57,11 @@ class NovaInlineRelationship extends Field
     private $sortUsing = '';
 
     /**
-     * Pass resourceClass to NovaInlineRelationship.
+     * Pass resourceClass to NovaInlineRelationshipExtended.
      *
      * @param string $class
      *
-     * @return NovaInlineRelationship
+     * @return NovaInlineRelationshipExtended
      */
     public function resourceClass(string $class): self
     {
@@ -75,7 +75,7 @@ class NovaInlineRelationship extends Field
      *
      * @param string $sortUsing
      *
-     * @return NovaInlineRelationship
+     * @return NovaInlineRelationshipExtended
      */
     public function sortUsing(string $sortUsing): self
     {
@@ -221,16 +221,16 @@ class NovaInlineRelationship extends Field
      * @param NovaRequest $request
      * @param array $item
      *
-     * @return NovaInlineRelationshipRequest
+     * @return NovaInlineRelationshipExtendedRequest
      */
-    public function getDuplicateRequest(NovaRequest $request, array $item): NovaInlineRelationshipRequest
+    public function getDuplicateRequest(NovaRequest $request, array $item): NovaInlineRelationshipExtendedRequest
     {
         $files = collect($item)->filter(function ($itemData) {
             return $itemData instanceof UploadedFile;
         });
 
         // Create a New Request
-        $newRequest = NovaInlineRelationshipRequest::createFrom($request)
+        $newRequest = NovaInlineRelationshipExtendedRequest::createFrom($request)
             ->duplicate($item, array_merge($request->all(), $item));
 
         // Update List of converted Files
@@ -243,12 +243,12 @@ class NovaInlineRelationship extends Field
      * Get Value for the Child attribute from field
      *
      * @param Field $field
-     * @param NovaInlineRelationshipRequest $request
+     * @param NovaInlineRelationshipExtendedRequest $request
      * @param string $attribute
      *
      * @return mixed|null
      */
-    public function getValueFromField(Field $field, NovaInlineRelationshipRequest $request, string $attribute)
+    public function getValueFromField(Field $field, NovaInlineRelationshipExtendedRequest $request, string $attribute)
     {
         $temp = new stdClass();
 
@@ -588,7 +588,7 @@ class NovaInlineRelationship extends Field
         $modelClass = get_class($model);
 
         if (! array_key_exists($modelClass, static::$observedModels)) {
-            $model::observe(NovaInlineRelationshipObserver::class);
+            $model::observe(NovaInlineRelationshipExtendedObserver::class);
             $model->updated_at = Carbon::now();
         }
 

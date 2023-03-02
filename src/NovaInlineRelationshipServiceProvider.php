@@ -1,16 +1,16 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship;
+namespace Keko94\NovaInlineRelationshipExtended;
 
 use Illuminate\Support\Facades\File;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Fields\Field;
 use Illuminate\Support\ServiceProvider;
-use Keko94\NovaInlineRelationship\Helpers\NovaInlineRelationshipHelper;
-use Keko94\NovaInlineRelationship\Exceptions\UnsupportedRelationshipType;
+use Keko94\NovaInlineRelationshipExtended\Helpers\NovaInlineRelationshipExtendedHelper;
+use Keko94\NovaInlineRelationshipExtended\Exceptions\UnsupportedRelationshipType;
 
-class NovaInlineRelationshipServiceProvider extends ServiceProvider
+class NovaInlineRelationshipExtendedServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -37,11 +37,11 @@ class NovaInlineRelationshipServiceProvider extends ServiceProvider
         });
 
         Field::macro('inline', function () {
-            if (! class_exists(NovaInlineRelationshipHelper::getObserver($this))) {
+            if (! class_exists(NovaInlineRelationshipExtendedHelper::getObserver($this))) {
                 throw UnsupportedRelationshipType::create(class_basename($this), $this->attribute);
             }
 
-            return NovaInlineRelationship::make($this->name, $this->attribute)->resourceClass($this->resourceClass);
+            return NovaInlineRelationshipExtended::make($this->name, $this->attribute)->resourceClass($this->resourceClass);
         });
 
     }

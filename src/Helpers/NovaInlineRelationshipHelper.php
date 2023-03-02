@@ -1,8 +1,8 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Helpers;
+namespace Keko94\NovaInlineRelationshipExtended\Helpers;
 
-class NovaInlineRelationshipHelper
+class NovaInlineRelationshipExtendedHelper
 {
     /**
      * Returns Observer Classname for a relationship
@@ -13,6 +13,6 @@ class NovaInlineRelationshipHelper
      */
     public static function getObserver($relationship)
     {
-        return '\\Keko94\\NovaInlineRelationship\\Observers\\' . class_basename($relationship) . 'Observer';
+        return '\\Keko94\\NovaInlineRelationshipExtended\\Observers\\' . class_basename($relationship) . 'Observer';
     }
 }

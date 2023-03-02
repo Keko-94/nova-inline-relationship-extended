@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Integrations;
+namespace Keko94\NovaInlineRelationshipExtended\Integrations;
 
 abstract class ThirdParty
 {

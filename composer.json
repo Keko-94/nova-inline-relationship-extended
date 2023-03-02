@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Keko94\\NovaInlineRelationship\\": "src/"
+            "Keko94\\NovaInlineRelationshipExtended\\": "src/"
         }
     },
     "autoload-dev": {
@@ -34,7 +34,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Keko94\\NovaInlineRelationship\\NovaInlineRelationshipServiceProvider"
+                "Keko94\\NovaInlineRelationshipExtended\\NovaInlineRelationshipExtendedServiceProvider"
             ]
         }
     },

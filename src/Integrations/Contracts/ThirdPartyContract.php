@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Integrations\Contracts;
+namespace Keko94\NovaInlineRelationshipExtended\Integrations\Contracts;
 
 interface ThirdPartyContract
 {

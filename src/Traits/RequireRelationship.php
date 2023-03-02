@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Traits;
+namespace Keko94\NovaInlineRelationshipExtended\Traits;
 
 trait RequireRelationship
 {

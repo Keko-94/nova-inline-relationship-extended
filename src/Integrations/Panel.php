@@ -1,8 +1,8 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Integrations;
+namespace Keko94\NovaInlineRelationshipExtended\Integrations;
 
-use Keko94\NovaInlineRelationship\Integrations\Contracts\ThirdPartyContract;
+use Keko94\NovaInlineRelationshipExtended\Integrations\Contracts\ThirdPartyContract;
 
 class Panel extends ThirdParty implements ThirdPartyContract
 {

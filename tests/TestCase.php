@@ -11,8 +11,8 @@ use Illuminate\Database\Schema\Blueprint;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Tests\Resource\Employee as EmployeeResource;
-use Keko94\NovaInlineRelationship\NovaInlineRelationship;
-use Keko94\NovaInlineRelationship\NovaInlineRelationshipServiceProvider;
+use Keko94\NovaInlineRelationshipExtended\NovaInlineRelationshipExtended;
+use Keko94\NovaInlineRelationshipExtended\NovaInlineRelationshipExtendedServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
@@ -191,7 +191,7 @@ abstract class TestCase extends Orchestra
      */
     protected function getPackageProviders($app)
     {
-        return [NovaInlineRelationshipServiceProvider::class];
+        return [NovaInlineRelationshipExtendedServiceProvider::class];
     }
 
     /**
@@ -200,6 +200,6 @@ abstract class TestCase extends Orchestra
     protected function tearDown(): void
     {
         parent::tearDown();
-        NovaInlineRelationship::$observedModels = [];
+        NovaInlineRelationshipExtended::$observedModels = [];
     }
 }

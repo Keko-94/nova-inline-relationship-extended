@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Rules;
+namespace Keko94\NovaInlineRelationshipExtended\Rules;
 
 use Illuminate\Support\MessageBag;
 use Illuminate\Contracts\Validation\Rule;

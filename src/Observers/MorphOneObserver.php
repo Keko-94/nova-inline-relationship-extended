@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Observers;
+namespace Keko94\NovaInlineRelationshipExtended\Observers;
 
 class MorphOneObserver extends HasOneObserver
 {

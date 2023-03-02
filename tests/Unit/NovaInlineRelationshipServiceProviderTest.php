@@ -8,10 +8,10 @@ use Tests\Resource\EmployeeTeams;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Keko94\NovaInlineRelationship\NovaInlineRelationship;
-use Keko94\NovaInlineRelationship\Exceptions\UnsupportedRelationshipType;
+use Keko94\NovaInlineRelationshipExtended\NovaInlineRelationshipExtended;
+use Keko94\NovaInlineRelationshipExtended\Exceptions\UnsupportedRelationshipType;
 
-class NovaInlineRelationshipServiceProviderTest extends TestCase
+class NovaInlineRelationshipExtendedServiceProviderTest extends TestCase
 {
     use WithFaker;
     use RefreshDatabase;
@@ -24,11 +24,11 @@ class NovaInlineRelationshipServiceProviderTest extends TestCase
         parent::setUp();
     }
 
-    public function testItResolvesInlineRelationshipToNovaInlineRelationshipField()
+    public function testItResolvesInlineRelationshipToNovaInlineRelationshipExtendedField()
     {
         $field = $this->employeeResource->resolveFieldForAttribute(new NovaRequest(), 'profile');
 
-        $this->assertInstanceOf(NovaInlineRelationship::class, $field);
+        $this->assertInstanceOf(NovaInlineRelationshipExtended::class, $field);
         $this->assertNotInstanceOf(HasOne::class, $field);
     }
 

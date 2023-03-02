@@ -29,7 +29,7 @@ composer require kirschbaum-development/nova-inline-relationship
 
 ## Usage
 
-To use `NovaInlineRelationship` in your Model's resource all you need to do is to add an inline method to the regular syntax of your related Model's Resource field(s).
+To use `NovaInlineRelationshipExtended` in your Model's resource all you need to do is to add an inline method to the regular syntax of your related Model's Resource field(s).
 
 If we assume that a `BlogPost` model has a one-to-many relationship with `Image`, your `BlogPost` resource would look like the following:
 
@@ -103,7 +103,7 @@ This will publish a config file as `config/nova-inline-relationships.php`. Add y
 ```php
 'third-party' => [
     'App\Nova\ThirdPartyIntegrations',
-    'Keko94\NovaInlineRelationship\Integrations',
+    'Keko94\NovaInlineRelationshipExtended\Integrations',
 ]
 ``` 
 
@@ -114,8 +114,8 @@ Create a new class inside that namespace that looks like the following:
 
 namespace App\Nova\ThirdPartyIntegrations;
 
-use Keko94\NovaInlineRelationship\Integrations\ThirdParty;
-use Keko94\NovaInlineRelationship\Integrations\Contracts\ThirdPartyContract;
+use Keko94\NovaInlineRelationshipExtended\Integrations\ThirdParty;
+use Keko94\NovaInlineRelationshipExtended\Integrations\Contracts\ThirdPartyContract;
 
 class SomeThirdPartyField extends ThirdParty implements ThirdPartyContract
 {

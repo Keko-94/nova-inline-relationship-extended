@@ -1,6 +1,6 @@
 <?php
 
-namespace Keko94\NovaInlineRelationship\Observers;
+namespace Keko94\NovaInlineRelationshipExtended\Observers;
 
 use Illuminate\Database\Eloquent\Model;
 

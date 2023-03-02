@@ -4,14 +4,14 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Keko94\NovaInlineRelationship\NovaInlineRelationship;
+use Keko94\NovaInlineRelationshipExtended\NovaInlineRelationshipExtended;
 
 class RequireChildTest extends TestCase
 {
     use WithFaker;
 
     /**
-     * @var NovaInlineRelationship
+     * @var NovaInlineRelationshipExtended
      */
     protected $inlineRelationship;
 
@@ -22,7 +22,7 @@ class RequireChildTest extends TestCase
     {
         parent::setUp();
 
-        $this->inlineRelationship = new NovaInlineRelationship('inline-relationship');
+        $this->inlineRelationship = new NovaInlineRelationshipExtended('inline-relationship');
     }
 
     public function testThatRequireChildIsFalseByDefault()

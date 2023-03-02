@@ -2,6 +2,6 @@
 
 return [
     'third-party' => [
-        'Keko94\NovaInlineRelationship\Integrations',
+        'Keko94\NovaInlineRelationshipExtended\Integrations',
     ],
 ];

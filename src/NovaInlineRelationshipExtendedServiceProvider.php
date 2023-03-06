@@ -19,18 +19,18 @@ class NovaInlineRelationshipExtendedServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadJsonTranslationsFrom(lang_path('vendor/nova-inline-relationship'));
+        $this->loadJsonTranslationsFrom(lang_path('vendor/nova-inline-relationship-extended'));
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('nova-inline-relationships.php'),
-            ], 'nova-inline-relationships');
+                __DIR__ . '/../config/config.php' => config_path('nova-inline-relationship-extended.php'),
+            ], 'nova-inline-relationship-extended');
         }
 
         Nova::serving(function () {
-            Nova::script('nova-inline-relationship', __DIR__ . '/../dist/js/field.js');
-            Nova::style('nova-inline-relationship', __DIR__ . '/../dist/css/field.css');
-            $localeFile = lang_path('vendor/nova-inline-relationship/' . app()->getLocale() . '.json');
+            Nova::script('nova-inline-relationship-extended', __DIR__ . '/../dist/js/field.js');
+            Nova::style('nova-inline-relationship-extended', __DIR__ . '/../dist/css/field.css');
+            $localeFile = lang_path('vendor/nova-inline-relationship-extended/' . app()->getLocale() . '.json');
             if (File::exists($localeFile)) {
                 Nova::translations($localeFile);
             }

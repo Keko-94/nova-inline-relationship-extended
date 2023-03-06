@@ -33,7 +33,7 @@ class NovaInlineRelationshipExtended extends Field
      *
      * @var string
      */
-    public $component = 'nova-inline-relationship';
+    public $component = 'nova-inline-relationship-extended';
 
     /**
      * All the Models observed by the field

@@ -26,6 +26,11 @@ class RelationshipRule implements Rule
     protected $response;
 
     /**
+     * @var bool
+     */
+    protected $globally_required;
+
+    /**
      * Create a new rule instance.
      *
      * @param array $rules
@@ -33,11 +38,12 @@ class RelationshipRule implements Rule
      * @param null|mixed $attributes
      *
      */
-    public function __construct(array $rules, $messages = null, $attributes = null)
+    public function __construct(array $rules, $messages = null, $attributes = null, $globally_required = false)
     {
         $this->rules = $rules;
         $this->messages = $messages;
         $this->attributes = $attributes;
+        $this->globally_required = $globally_required;
     }
 
     /**
@@ -50,6 +56,10 @@ class RelationshipRule implements Rule
      */
     public function passes($attribute, $value)
     {
+        if (!$this->globally_required && !$value) {
+            return true;
+        }
+
         $fixed_value = [];
         foreach ($value as $k => $v) {
             $fixed_value[$k]['modelId'] = $v['modelId'];

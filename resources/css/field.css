@@ -1,0 +1,47 @@
+#users-contact-nova-inline-relationship-extended > div {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+#users-contact-nova-inline-relationship-extended > div > div.md\:w-1\/4.md\:py-3 {
+    padding-left: .5em;
+}
+
+#users-contact-nova-inline-relationship-extended > div > div.md\:w-1\/4.md\:py-3 {
+    width: 20% !important;
+}
+
+#users-contact-nova-inline-relationship-extended > div > div.md\:w-3\/4.md\:py-3.break-all.lg\:break-words > div:nth-child(2) > div {
+    text-align: left;
+}
+
+#users-contact-nova-inline-relationship-extended > div > div.md\:w-3\/4.md\:py-3.break-all.lg\:break-words > div:nth-child(1) > div > div:nth-child(4) > div > div.mt-1.md\:mt-0.pb-5.px-6.md\:px-8.md\:w-4\/5.w-full.md\:py-5 > div {
+    flex-direction: column !important;
+}
+
+#users-contact-nova-inline-relationship-extended > div > div.md\:w-3\/4.md\:py-3.break-all.lg\:break-words {
+    padding: 0 1em;
+}
+
+#users-contact-nova-inline-relationship-extended > div > div.md\:w-3\/4.md\:py-3.break-all.lg\:break-words {
+    width: 60%;
+}
+
+#users-contact-nova-inline-relationship-extended.required span::after {
+    content: ' *';
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: rgba(var(--colors-red-500));
+}
+
+@media screen and (max-width: 1024px) {
+    #users-contact-nova-inline-relationship-extended > div > div.md\:w-3\/4.md\:py-3.break-all.lg\:break-words {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #users-contact-nova-inline-relationship-extended > div > div.md\:w-3\/4.md\:py-3.break-all.lg\:break-words {
+        width: 100%;
+    }
+}

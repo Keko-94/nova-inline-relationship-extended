@@ -1,49 +1,51 @@
 <template>
-  <PanelItem
-      :field="field"
-      :errors="errors"
-      :show-errors="false"
-      class="mx-0 md:py-5"
-  >
-    <template #value>
-      <draggable
-          :list="items"
-          item-key="id"
-          handle=".relationship-item-handle"
-          @start="drag = true"
-          @end="drag = false"
-      >
-        <template
-            #item="{element, index}"
+  <div v-bind:id="field.uniqueKey" :class="{ required: field.required }">
+    <PanelItem
+        :field="field"
+        :errors="errors"
+        :show-errors="false"
+        class="mx-0 md:py-5"
+    >
+      <template #value>
+        <draggable
+            :list="items"
+            item-key="id"
+            handle=".relationship-item-handle"
+            @start="drag = true"
+            @end="drag = false"
         >
-          <relationship-form-item
-              :ref="refName(index)"
-              :key="element.id"
-              :id="index"
-              :model-id="element.modelId"
-              :model-key="field.modelKey"
-              :value="element.fields"
-              :errors="errorList[index]"
-              :field="field"
-              @deleted="removeItem(index)"
-          />
-        </template>
-      </draggable>
-      <div
-          v-if="!field.singular || !items.length"
-      >
-        <div class="w-full text-right">
-          <button
-              type="button"
-              class="shadow relative bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 cursor-pointer rounded text-sm font-bold focus:outline-none focus:ring ring-primary-200 dark:ring-gray-600 inline-flex items-center justify-center h-9 px-3 shadow relative bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 mr-3"
-              @click="addItem()"
+          <template
+              #item="{element, index}"
           >
-            {{ __("Add") }} {{ field.singularLabel.toLowerCase() }}
-          </button>
+            <relationship-form-item
+                :ref="refName(index)"
+                :key="element.id"
+                :id="index"
+                :model-id="element.modelId"
+                :model-key="field.modelKey"
+                :value="element.fields"
+                :errors="errorList[index]"
+                :field="field"
+                @deleted="removeItem(index)"
+            />
+          </template>
+        </draggable>
+        <div
+            v-if="!field.singular || !items.length"
+        >
+          <div class="w-full text-right">
+            <button
+                type="button"
+                class="shadow relative bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 cursor-pointer rounded text-sm font-bold focus:outline-none focus:ring ring-primary-200 dark:ring-gray-600 inline-flex items-center justify-center h-9 px-3 shadow relative bg-primary-500 hover:bg-primary-400 text-white dark:text-gray-900 mr-3"
+                @click="addItem()"
+            >
+              {{ __("Add") }} {{ field.singularLabel.toLowerCase() }}
+            </button>
+          </div>
         </div>
-      </div>
-    </template>
-  </PanelItem>
+      </template>
+    </PanelItem>
+  </div>
 </template>
 
 <script>

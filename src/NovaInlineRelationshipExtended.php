@@ -438,7 +438,9 @@ class NovaInlineRelationshipExtended extends Field
             }
         });
 
-        return new RelationshipRule($ruleArray, $messageArray, $attribArray);
+        $globally_required = $this->isRequired(app(NovaRequest::class));
+
+        return new RelationshipRule($ruleArray, $messageArray, $attribArray, $globally_required);
     }
 
     /**

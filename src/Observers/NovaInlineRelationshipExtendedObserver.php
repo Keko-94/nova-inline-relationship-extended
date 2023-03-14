@@ -100,7 +100,7 @@ class NovaInlineRelationshipExtendedObserver
                 return Integrate::fields($value);
             })
             ->filter(function ($value) {
-                return $value->component === 'nova-inline-relationship';
+                return $value->component === 'nova-inline-relationship-extended';
             })
             ->pluck('attribute')
             ->all();

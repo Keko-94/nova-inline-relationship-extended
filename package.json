@@ -22,7 +22,7 @@
         "lodash.template": "^4.5.0",
         "mem": "^4.0.0",
         "postcss": "^8.3.11",
-        "vue-loader": "^16.8.3",
+        "vue-loader": "^16.2.0",
         "vue-template-compiler": "^2.7.14",
         "vuedraggable": "^4.1.0",
         "vuex": "^4.0.2",

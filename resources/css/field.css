@@ -27,11 +27,21 @@
     width: 60%;
 }
 
-#users-contact-nova-inline-relationship-extended.required span::after {
+#users-contact-nova-inline-relationship-extended.required span:first-child::after {
     content: ' *';
     font-size: .875rem;
     line-height: 1.25rem;
     color: rgba(var(--colors-red-500));
+}
+
+.ooo\:password-generator.ooo\:pg-toolbar-bottom.ooo\:pg-responsive ul.ooo\:pg-options li.ooo\:pg-option:first-child {
+    border-bottom-left-radius: 0.25em !important;
+    border-top-left-radius: 0.25em;
+    border-left-width: 1px !important;
+}
+
+#users-contact-nova-inline-relationship-extended.required .cursor-move span:first-child::after {
+    content: '';
 }
 
 @media screen and (max-width: 1024px) {

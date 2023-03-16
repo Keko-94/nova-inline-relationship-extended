@@ -506,7 +506,7 @@ class NovaInlineRelationshipExtended extends Field
             return [
                 'component' => get_class($value),
                 'label' => $value->name,
-                'options' => $this->serializeOptions(data_get($value, 'optionsCallback'), false),
+                'options' => array_merge($this->serializeOptions(data_get($value, 'optionsCallback'), false),$this->serializeOptions(data_get($value, 'options'), false)),
                 'rules' => array_merge($value->rules, $customRules ? $value->$customRules : []),
                 'attribute' => $value->attribute,
                 'placeholder' => $value->placeholder

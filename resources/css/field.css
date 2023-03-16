@@ -40,7 +40,7 @@
     border-left-width: 1px !important;
 }
 
-#users-contact-nova-inline-relationship-extended.required .cursor-move span:first-child::after {
+#users-contact-nova-inline-relationship-extended.required .cursor-move span:first-child::after, #users-contact-nova-inline-relationship-extended.required button.appearance-none span::after {
     content: '';
 }
 

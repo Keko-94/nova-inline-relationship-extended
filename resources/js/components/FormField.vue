@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:id="field.uniqueKey" :class="{ required: field.required }">
+  <div v-bind:id="field.uniqueKey" class="teetche-inline-extended" :class="{ required: field.required }">
     <PanelItem
         :field="field"
         :errors="errors"
